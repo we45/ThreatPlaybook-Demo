@@ -1,11 +1,11 @@
 *** Settings ***
-Library  ThreatPlaybook  Cut The Funds App
+Library  threat_playbook.ThreatPlaybook  cut_the_funds
 Library  Collections
 Library  RoboZap  http://127.0.0.1:8090/  8090
 Library  RoboSslyze
 Library  RoboGit
 Library  RoboNodeJSScan
-Library  REST  http://172.20.10.4:3000  proxies={"http": "http://127.0.0.1:8090", "https": "http://127.0.0.1:8090"}
+Library  REST  http://192.168.56.101:3000  proxies={"http": "http://127.0.0.1:8090", "https": "http://127.0.0.1:8090"}
 Library  RoboNpmAudit
 
 *** Variables ***
@@ -14,8 +14,7 @@ ${GIT_URL}  https://github.com/we45/Cut-The-Funds-NodeJS
 ${TO_PATH}  /Users/abhaybhargav/Documents/Code/Python/ctf_blackhat/ctf/git_source
 
 ${TARGET_NAME}  Cut the Funds Expenser Application
-${TARGET_URI}  172.20.10.4:3000
-${TARGET_HOST}  localhost
+${TARGET_URI}  192.168.56.101:3000
 ${SSL_TARGET}  207.148.70.86
 #CONFIG
 ${RESULTS_PATH}  /Users/abhaybhargav/Documents/Code/Python/ctf_blackhat/ctf/results
@@ -43,11 +42,8 @@ Create Entities
 Connect Entities
     find or connect entities
 
-load_test_cases
-    process test cases
-
 generate threat models
-    find or load cases from directory  link_tests=True
+    find or load cases from directory
 
 Create Targets
     find or create target  ${TARGET_NAME}  ${TARGET_URI}
@@ -125,8 +121,7 @@ ZAP Die
     clear contents from directory  ${TO_PATH}
 
 Write Final Report
-    ${all_true}=  convert to boolean  True
-    write markdown report  gen_diagram=${all_true}  gen_threat_model=${all_true}
+    write markdown report  gen_diagram=True  gen_threat_model=True
 
 Generate Threat Maps for all Models
     generate threat maps
