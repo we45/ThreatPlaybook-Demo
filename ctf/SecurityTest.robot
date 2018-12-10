@@ -145,7 +145,7 @@ Update Expense with Approved Tag
     Integer  response status  200
     ${vul_name}=  convert to string  Insecure Direct Object Reference - Mass Assignment
     ${tool}=  convert to string  Custom Exploit Script
-    ${cwe}=  convert to integer  285
+    ${cwe}=  convert to integer  639
     ${description}=  convert to string  The update expense function is vulnerable to a Mass-Assignment style Insecure Direct Object Reference, where the attacker can guess the name of the named parameters and bypass authorization"
     ${severity}=  convert to integer  3
     &{vul_dict}=  Create Dictionary  name=${vul_name}  tool=${tool}  cwe=${cwe}  description=${description}  severity=${severity}  target_name=${TARGET_NAME}
