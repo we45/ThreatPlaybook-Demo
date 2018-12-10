@@ -5,7 +5,7 @@ Library  RoboZap  http://127.0.0.1:8090/  8090
 Library  RoboSslyze
 Library  RoboGit
 Library  RoboNodeJSScan
-Library  REST  http://192.168.56.101:3000  proxies={"http": "http://127.0.0.1:8090", "https": "http://127.0.0.1:8090"}
+Library  REST  http://localhost:3000  proxies={"http": "http://127.0.0.1:8090", "https": "http://127.0.0.1:8090"}
 Library  RoboNpmAudit
 
 *** Variables ***
@@ -14,7 +14,7 @@ ${GIT_URL}  https://github.com/we45/Cut-The-Funds-NodeJS
 ${TO_PATH}  /Users/abhaybhargav/Documents/Code/Python/ctf_blackhat/ctf/git_source
 
 ${TARGET_NAME}  Cut the Funds Expenser Application
-${TARGET_URI}  192.168.56.101:3000
+${TARGET_URI}  localhost:3000
 ${SSL_TARGET}  207.148.70.86
 #CONFIG
 ${RESULTS_PATH}  /Users/abhaybhargav/Documents/Code/Python/ctf_blackhat/ctf/results
