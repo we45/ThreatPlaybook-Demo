@@ -29,7 +29,7 @@ Pygments==2.2.0
 pymongo==3.7.0
 python-owasp-zap-v2.4==0.0.14
 pytz==2018.3
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 RESTinstance==1.0.0b35
 rfc3987==1.3.7
