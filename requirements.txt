@@ -25,7 +25,7 @@ nassl==1.1.0
 pathlib==1.0.1
 ply==3.11
 pycparser==2.18
-Pygments==2.2.0
+Pygments==2.7.4
 pymongo==3.7.0
 python-owasp-zap-v2.4==0.0.14
 pytz==2018.3
