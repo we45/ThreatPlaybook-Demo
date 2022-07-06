@@ -19,7 +19,7 @@ ipaddress==1.0.22
 jsonpath-ng==1.4.3
 jsonpointer==2.0
 jsonschema==2.6.0
-lxml==4.2.1
+lxml==4.9.1
 mongoengine==0.15.0
 nassl==1.1.0
 pathlib==1.0.1
